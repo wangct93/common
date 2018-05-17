@@ -1019,6 +1019,9 @@ hr{
 .overflow-hide{
     overflow: hidden;
 }
+.overflow-auto{
+    overflow: auto;
+}
 .scroll-box{
     overflow: auto;
 }
