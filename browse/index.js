@@ -3,7 +3,6 @@
  */
 let util = require('../lib/util');
 let $ = require('./$');
-
 /*初始化窗口宽高*/
 try{
     window.wt = util;
