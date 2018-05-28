@@ -773,17 +773,17 @@ hr{
 
 /******************查询输入框***********************/
 
-.search-box{
+.w-search-box{
     width: 450px;
     height: 40px;
     margin: 0 auto;
     position: relative;
 }
-.search-input{
+.w-search-input{
     padding-left: 15px;
     border-radius: 6px;
 }
-.search-btn{
+.w-search-btn{
     position: absolute;
     right: 10px;
     top: 50%;
@@ -793,7 +793,7 @@ hr{
     margin-top: -12px;
     opacity: .6;
 }
-.search-btn:hover{
+.w-search-btn:hover{
     opacity: 1;
 }
 
