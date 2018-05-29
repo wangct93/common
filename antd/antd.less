@@ -1,0 +1,16 @@
+@import "~antd/dist/antd.css";
+@font-face {
+    font-family: 'anticon';
+    src: url('font.eot');
+    /* IE9*/
+    src: url('font.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('font.ttf') format('truetype'), /* iOS 4.1- */ url('font.svg') format('svg');
+}
+
+.ant-spin-nested-loading  {
+    > div{
+        > .ant-spin{
+            left: 0;
+            top: 0;
+        }
+    }
+}
