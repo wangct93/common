@@ -217,7 +217,7 @@ hr{
     margin-top: -8px;
     left: 10px;
 }
-
+.img-box-full > img,
 .img-box-fit > img{
     width:100%;
     height:100%;
