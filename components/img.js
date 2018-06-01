@@ -18,7 +18,6 @@ const queue = new wt.Queue({
         }
     }
 });
-window.q = queue;
 
 export default class Img extends Component{
     render(){
