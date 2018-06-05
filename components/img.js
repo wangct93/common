@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 const wt = require('@util/browse');
 import {Spin} from 'antd';
+import ErrorSrc from '../static/img/noImg.jpg';
 
 const queue = new wt.Queue({
     execFunc(item,cb){
@@ -18,7 +19,6 @@ const queue = new wt.Queue({
     }
 });
 
-
 export default class Img extends Component{
     render(){
         let {full = true,src = errorSrc} = this.props;
@@ -30,23 +30,36 @@ export default class Img extends Component{
             </div>
         </Spin>
     }
+    componentWillUpdate(props,state){
+        let {src} = props;
+        let {src:oldSrc} = this.props;
+        let {status} = this.state || {};
+        if(oldSrc !== src && status === 'finish'){
+            queue.addItem(this);
+            queue.start();
+        }
+    }
     componentWillUnmount(){
         this.unmount = true;
+        this.next();
     }
     componentDidMount(){
         queue.addItem(this);
         queue.start();
     }
     load(){
-        this.finish();
         this.setState({
             status:'finish'
         });
+        this.next();
+    }
+    next(){
+        wt.execFunc(this.finish);
         delete this.finish;
     }
 }
 
-let errorSrc = 'img/1.jpg';
+let errorSrc = ErrorSrc;
 
 export const setErrorSrc = src => {
     errorSrc = src;

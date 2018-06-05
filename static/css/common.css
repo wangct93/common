@@ -1031,6 +1031,9 @@ hr{
 .hide{
     display:none;
 }
+.hide-i{
+    display: none !important;
+}
 .visible-hide{
     visibility:hidden;
 }

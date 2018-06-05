@@ -6,6 +6,6 @@
 module.exports = {
     enter:'browse/index.js',
     dest:'./static/js',
-    compress:false,
+    compress:true,
     fileName:'util.js'
 };
