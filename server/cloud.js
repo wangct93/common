@@ -2,7 +2,7 @@
  * Created by Administrator on 2018/3/6.
  */
 
-let wt = require('./lib/util/util');
+let wt = require('./base');
 let config = require('./config').cloud;
 let COS = require('cos-nodejs-sdk-v5');
 

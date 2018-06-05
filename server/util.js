@@ -11,7 +11,7 @@ const request = require('request');
 
 const queryString = require('queryString');
 const crypto = require('crypto');
-const wt = require('./lib/util/util');
+const wt = require('./base');
 const config = require('./config');
 const cloud = require('./cloud');
 

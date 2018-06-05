@@ -7,16 +7,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
-const config = require('../modules/config');
-const wt = require('../modules/util.js');
+const config = require('../server/config');
+const wt = require('../lib/util');
 
-const funcRouter = require('../routers/api');
-
-
-const bookRouter = require('../routers/book');
-// var blogRouter = require('../routers/blogReact');
-// var chatRouter = require('../routers/chat');
-const indexRouter = require('../routers/blog');
 
 const app = express();
 const port = config.port || 8888;
@@ -25,7 +18,7 @@ const port = config.port || 8888;
 /**
  * 设置模版引擎
  */
-app.set('views',path.resolve(__dirname,'../views/ejs'));
+app.set('views',path.resolve(__dirname,'../templates/ejs'));
 app.set('view engine','ejs');
 
 /**
@@ -78,3 +71,4 @@ app.listen(port,() =>{
     console.log('the server is started on port '+ port +'!');
 });
 
+module.exports = app;
